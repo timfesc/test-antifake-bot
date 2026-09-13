@@ -8,6 +8,7 @@ from bot.models.base import Base
 
 class User(Base):
     __tablename__ = "users"
+    
 
     id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
     telegram_id: Mapped[int] = mapped_column(BigInteger, unique=True, nullable=False)
